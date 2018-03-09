@@ -1,0 +1,99 @@
+@import './base.styl'
+@import './colors.styl'
+// @import './animate.styl'
+
+@import './utils.styl'
+@import './media.styl'
+
+
+
+body
+  margin 0
+  padding 0
+  font-family 'Lato' sans-serif
+  color black !important
+  background #f0f0f0
+  
+
+.main-content
+  padding-top 30px
+  
+.my-header  
+  position fixed
+  width 100%
+  z-index 100000000000000000000
+  height 65px
+  &-menu
+    transition .3s
+    position relative
+    left -100vw
+  &-notification
+    position absolute
+    right 20px
+    background #91a3b3
+    width 40px
+    height 40px
+    border-radius 50%
+    cursor pointer
+    transition .3s
+    
+    &:hover
+      background hannah
+
+
+        
+input[type="checkbox"].check
+ &:not(:checked), &:checked
+   position absolute
+   left -9999px
+ &:not(:checked) + label, &:checked + label
+   position relative
+   padding-left 1.95em
+   cursor pointer
+ &:not(:checked) + label:before, &:checked + label:before
+   content ''
+   position absolute
+   left 0
+   top 0
+   width 1.5em
+   height 1.5em
+   border 2px solid #ccc
+   background #fff
+   border-radius 4px
+   box-shadow inset 0 1px 3px rgba(0, 0, 0, 0.1)
+ &:not(:checked) + label:after, &:checked + label:after
+   content '✔'
+   position absolute
+   top .2em
+   left .2em
+   font-size 1.2em
+   line-height 0.8
+   color gold
+   transition all .2s
+ &:not(:checked) + label:after
+   opacity 0
+   transform scale(0)
+ &:checked + label:after
+   opacity 1
+   transform scale(1)
+ &:disabled
+   &:not(:checked) + label:before
+     box-shadow none
+     border-color #bbb
+     background-color #ddd
+   &:checked + label
+     &:before
+       box-shadow none
+       border-color #bbb
+       background-color #ddd
+     &:after
+       color #999
+   + label
+     color #aaa
+ &:checked:focus + label:before, &:not(:checked):focus + label:before
+   border 2px solid #4778d9
+
+
+label:hover:before
+  border 2px solid #4778d9 !important
+
